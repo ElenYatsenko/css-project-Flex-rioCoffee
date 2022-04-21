@@ -1,1 +1,71 @@
-.main-container{}
+* {
+  color: white;
+  --max-width: 100px;
+}
+/* --------------header-------------- */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  min-width: 350px;
+  height: 80px;
+  margin: auto;
+  padding-left: 3em;
+  position: relative;
+  background-color: #262626;
+}
+/* --------------logo-------------- */
+.logo {
+  max-width: var(--max-width);
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+}
+/* --------------nav-------------- */
+.nav-list-item {
+  display: inline-block;
+  max-width: var(--max-width);
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: rgb(249, 248, 245) 0 0 3px;
+}
+.nav-list-item + .nav-list-item {
+  margin-left: 1em;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+/* --------------button-------------- */
+.contact-btn {
+  max-width: var(--max-width);
+  margin-right: 2em;
+  padding: 10px 20px;
+  background-color: #262626;
+  text-shadow: rgb(249, 248, 245) 0 0 3px;
+  font-size: 12px;
+  border: solid white 1px;
+  border-radius: 5%;
+}
+.text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* ---------------image------------ */
+.header::after {
+  content: "";
+  position: absolute;
+  background-image: url(../image/coffee.jpg);
+  background-position: right;
+  width: 100%;
+  height: 90vh;
+  top: 100%;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+}
