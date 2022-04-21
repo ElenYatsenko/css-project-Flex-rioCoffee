@@ -1,6 +1,7 @@
 * {
   color: white;
   --max-width: 100px;
+  --min-height: 100px;
 }
 /* --------------header-------------- */
 .header {
@@ -11,9 +12,10 @@
   max-width: 1200px;
   width: 100%;
   min-width: 350px;
-  height: 80px;
+  min-height: var(--min-height);
+  max-height: calc(var(--min-height) * 2);
   margin: auto;
-  padding-left: 3em;
+  padding: 0.5em 0 0.5em 3em;
   position: relative;
   background-color: #262626;
 }
@@ -48,6 +50,7 @@
   background-color: #262626;
   text-shadow: rgb(249, 248, 245) 0 0 3px;
   font-size: 12px;
+  font-weight: bold;
   border: solid white 1px;
   border-radius: 5%;
 }
